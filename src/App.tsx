@@ -45,10 +45,10 @@ const App = () => {
 
   return (
     <>
-      <h1 className="font-bold text-center text-3xl mt-56 md:text-4xl lg:text-2xl xl:text-3xl">
+      <h1 className="font-bold text-center text-3xl mt-10 md:text-4xl lg:text-2xl xl:text-3xl">
         Your Daily Tasks - Stay Organized and Focused
       </h1>
-      <div className="container mx-auto w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-blue-200 h-auto mt-36 rounded-md p-4 shadow-md">
+      <div className="container mx-auto w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-blue-200 h-auto mt-10 rounded-md p-4 shadow-md">
         <form
           className="flex flex-col gap-4 md:flex-row md:justify-center"
           onSubmit={saveTodo}
