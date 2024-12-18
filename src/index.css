@@ -9,3 +9,8 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    @apply bg-gradient-to-r from-blue-400 to-gray-200;
+    @apply text-gray-900;
+}

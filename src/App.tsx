@@ -45,8 +45,8 @@ const App = () => {
 
   return (
     <>
-      <h1 className="font-bold text-center text-3xl mt-20 md:text-4xl lg:text-2xl xl:text-3xl">
-        Your ToDo's - Remind yourself daily to complete the tasks
+      <h1 className="font-bold text-center text-3xl mt-56 md:text-4xl lg:text-2xl xl:text-3xl">
+        Your Daily Tasks - Stay Organized and Focused
       </h1>
       <div className="container mx-auto w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-blue-200 h-auto mt-36 rounded-md p-4 shadow-md">
         <form
@@ -62,12 +62,12 @@ const App = () => {
     onChange={(e) => setTask(e.target.value)}
   />
   <button
-    type="submit"
-    className="w-full md:w-1/4 lg:w-1/5 xl:w-1/6 p-2 rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
-    disabled={task.trim() === ""}
-  >
-    Add Task
-  </button>
+  type="submit"
+  className="w-full md:w-1/5 lg:w-1/6 xl:w-1/7 px-[1px] text-sm rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
+  disabled={task.trim() === ""}
+>
+  Add Task
+</button>
 </form>
 
        <div className="flex justify-center gap-4 mt-4">
