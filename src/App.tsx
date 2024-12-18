@@ -63,7 +63,7 @@ const App = () => {
           />
           <button
             type="submit"
-            className="w-full md:w-1/5 lg:w-1/6 xl:w-1/7 px-[1px] text-sm rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
+            className="w-full md:w-1/5 lg:w-1/6 xl:w-1/7 p-1 text-sm rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
             disabled={task.trim() === ""}
           >
             Add Task
