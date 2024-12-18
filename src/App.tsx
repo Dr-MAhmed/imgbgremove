@@ -28,12 +28,12 @@ const App = () => {
   }, []);
 
   const deleteTodo = (index: number) => {
-  const newTodo = [...todo];
-  newTodo.splice(index, 1);
-  setTodo(newTodo);
-  localStorage.removeItem("todo");
-  localStorage.setItem("todo", JSON.stringify(newTodo));
-};
+    const newTodo = [...todo];
+    newTodo.splice(index, 1);
+    setTodo(newTodo);
+    localStorage.removeItem("todo");
+    localStorage.setItem("todo", JSON.stringify(newTodo));
+  };
 
   // Toggle the done state of a todo item
   const toggleDone = (index: number) => {
@@ -50,52 +50,56 @@ const App = () => {
       </h1>
       <div className="container mx-auto w-11/12 md:w-2/3 lg:w-1/2 xl:w-1/3 bg-blue-200 h-auto mt-36 rounded-md p-4 shadow-md">
         <form
-  className="flex flex-col gap-4 md:flex-row md:justify-center"
-  onSubmit={saveTodo}
->
-  <input
-    type="text"
-    name="name"
-    placeholder="Your Todo tasks"
-    className="w-full md:w-3/4 lg:w-4/5 xl:w-5/6 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
-    value={task}
-    onChange={(e) => setTask(e.target.value)}
-  />
-  <button
-  type="submit"
-  className="w-full md:w-1/5 lg:w-1/6 xl:w-1/7 px-[1px] text-sm rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
-  disabled={task.trim() === ""}
->
-  Add Task
-</button>
-</form>
+          className="flex flex-col gap-4 md:flex-row md:justify-center"
+          onSubmit={saveTodo}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Todo tasks"
+            className="w-full md:w-3/4 lg:w-4/5 xl:w-5/6 p-2 rounded-md border border-gray-300 focus:outline-none focus:ring focus:border-blue-500"
+            value={task}
+            onChange={(e) => setTask(e.target.value)}
+          />
+          <button
+            type="submit"
+            className="w-full md:w-1/5 lg:w-1/6 xl:w-1/7 px-[1px] text-sm rounded-md bg-blue-500 text-white hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-500"
+            disabled={task.trim() === ""}
+          >
+            Add Task
+          </button>
+        </form>
 
-       <div className="flex justify-center gap-4 mt-4">
-  <button
-    className={`p-2 rounded-md text-blue-500 ${
-      filter === "all" ? "border-b-2 border-blue-700 text-blue-500" : ""
-    }`}
-    onClick={() => setFilter("all")}
-  >
-    All
-  </button>
-  <button
-    className={`p-2 rounded-md text-blue-500  ${
-      filter === "pending" ? "border-b-2 border-blue-700 text-blue-500" : ""
-    }`}
-    onClick={() => setFilter("pending")}
-  >
-    Pending
-  </button>
-  <button
-    className={`p-2 rounded-md text-blue-500  ${
-      filter === "done" ? "border-b-2 border-blue-700 text-blue-500" : ""
-    }`}
-    onClick={() => setFilter("done")}
-  >
-    Done
-  </button>
-</div>
+        <div className="flex justify-center gap-4 mt-4">
+          <button
+            className={`p-2 rounded-md text-blue-500 ${
+              filter === "all" ? "border-b-2 border-blue-700 text-blue-500" : ""
+            }`}
+            onClick={() => setFilter("all")}
+          >
+            All
+          </button>
+          <button
+            className={`p-2 rounded-md text-blue-500  ${
+              filter === "pending"
+                ? "border-b-2 border-blue-700 text-blue-500"
+                : ""
+            }`}
+            onClick={() => setFilter("pending")}
+          >
+            Pending
+          </button>
+          <button
+            className={`p-2 rounded-md text-blue-500  ${
+              filter === "done"
+                ? "border-b-2 border-blue-700 text-blue-500"
+                : ""
+            }`}
+            onClick={() => setFilter("done")}
+          >
+            Done
+          </button>
+        </div>
 
         {/* Todo List */}
         <div className="mt-4">
